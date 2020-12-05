@@ -23,7 +23,17 @@ namespace TicTacToe_WPF_GUI
             }
             else if (gameBoard.IsThereAWinner())
             {
-                MessageBox.Show("PLAYER \"" + currentPlayer.Text + "\" WON");
+                if (currentPlayer.Text=="X")
+                {
+                    gameBoard.scoreX++;
+                    scoreX.Text = gameBoard.scoreX.ToString();
+                }
+                else
+                {
+                    gameBoard.scoreO++;
+                    scoreO.Text = gameBoard.scoreO.ToString();
+                }
+                MessageBox.Show("PLAYER \"" + currentPlayer.Text + "\" WON \n\n press \"NEW GAME\" to restart");
             }
             else
             {
@@ -119,5 +129,19 @@ namespace TicTacToe_WPF_GUI
             }
         }
 
+        private void GameResetClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            gameBoard.ResetBoard();
+            GameCell1.Content = "";
+            GameCell2.Content = "";
+            GameCell3.Content = "";
+            GameCell4.Content = "";
+            GameCell5.Content = "";
+            GameCell6.Content = "";
+            GameCell7.Content = "";
+            GameCell8.Content = "";
+            GameCell9.Content = "";
+            switchTurn();
+        }
     }
 }
