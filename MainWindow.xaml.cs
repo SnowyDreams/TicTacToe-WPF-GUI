@@ -17,13 +17,9 @@ namespace TicTacToe_WPF_GUI
 
         private void switchTurn()
         {
-            if (gameBoard.IsThereATie())
+            if (gameBoard.IsThereAWinner())
             {
-                MessageBox.Show("Tie");
-            }
-            else if (gameBoard.IsThereAWinner())
-            {
-                if (currentPlayer.Text=="X")
+                if (currentPlayer.Text == "X")
                 {
                     gameBoard.scoreX++;
                     scoreX.Text = gameBoard.scoreX.ToString();
@@ -34,6 +30,10 @@ namespace TicTacToe_WPF_GUI
                     scoreO.Text = gameBoard.scoreO.ToString();
                 }
                 MessageBox.Show("PLAYER \"" + currentPlayer.Text + "\" WON \n\n press \"NEW GAME\" to restart");
+            }
+            else if (gameBoard.IsThereATie())
+            {
+                MessageBox.Show("Tie");
             }
             else
             {
