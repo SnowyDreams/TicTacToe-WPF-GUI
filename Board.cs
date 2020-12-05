@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TicTacToe_WPF_GUI
 {
@@ -43,7 +39,7 @@ namespace TicTacToe_WPF_GUI
                         {
                             board[0] = 'O';
                             player++;
-                            
+
                         }
 
                     }
@@ -251,5 +247,19 @@ namespace TicTacToe_WPF_GUI
         {
             return player;
         }
+
+        public bool MarkCell(int cell, char player)
+        {
+            if (board[cell - 1] != 'X' && board[cell - 1] != 'O')
+            {
+                board[cell - 1] = player;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
