@@ -208,7 +208,11 @@ namespace TicTacToe_WPF_GUI
                 if (board[i] == board[i + 1] && board[i] == board[i + 2])
                 {
                     winner = !winner;
-                    continue;
+                    for (int j = 1; j <= 9; j++)
+                    {
+                        MarkCell(j, 'Z');
+                    }
+                    return winner;
                 }
             }
 
@@ -217,12 +221,21 @@ namespace TicTacToe_WPF_GUI
                 if (board[i] == board[i + 3] && board[i] == board[i + 6])
                 {
                     winner = !winner;
-                    continue;
+                    for (int j = 1; j <= 9; j++)
+                    {
+                        MarkCell(j, 'Z');
+                    }
+                    return winner;
                 }
             }
             if ((board[0] == board[4] && board[0] == board[8]) || (board[2] == board[4] && board[2] == board[6]))
             {
                 winner = !winner;
+                for (int j = 1; j <= 9; j++)
+                {
+                    MarkCell(j, 'Z');
+                }
+                return winner;
             }
             return winner;
         }
@@ -236,7 +249,7 @@ namespace TicTacToe_WPF_GUI
                 if (board[i] != 'X' && board[i] != 'O')
                 {
                     tie = false;
-                    break;
+                    return tie;
                 }
             }
 
@@ -250,7 +263,7 @@ namespace TicTacToe_WPF_GUI
 
         public bool MarkCell(int cell, char player)
         {
-            if (board[cell - 1] != 'X' && board[cell - 1] != 'O')
+            if (board[cell - 1] != 'X' && board[cell - 1] != 'O' && board[cell - 1] != 'Z')
             {
                 board[cell - 1] = player;
                 return true;

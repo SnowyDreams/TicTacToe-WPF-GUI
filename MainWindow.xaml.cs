@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace TicTacToe_WPF_GUI
 {
@@ -23,30 +10,41 @@ namespace TicTacToe_WPF_GUI
         Board gameBoard = new Board();
         public MainWindow()
         {
-            
+
             InitializeComponent();
-     
+
         }
 
         private void switchTurn()
         {
-            if (currentPlayer.Text=="X")
+            if (gameBoard.IsThereATie())
             {
-                currentPlayer.Text="O";
+                MessageBox.Show("Tie");
+            }
+            else if (gameBoard.IsThereAWinner())
+            {
+                MessageBox.Show("PLAYER \"" + currentPlayer.Text + "\" WON");
             }
             else
             {
-                currentPlayer.Text = "X";
-            }
+                if (currentPlayer.Text == "X")
+                {
+                    currentPlayer.Text = "O";
+                }
+                else
+                {
+                    currentPlayer.Text = "X";
+                }
+            }                       
         }
 
         private void gameCell9_Click(object sender, RoutedEventArgs e)
         {
-            if(gameBoard.MarkCell(9,currentPlayer.Text[0]))
+            if (gameBoard.MarkCell(9, currentPlayer.Text[0]))
             {
                 GameCell9.Content = currentPlayer.Text;
                 switchTurn();
-            } 
+            }
         }
 
         private void gameCell8_Click(object sender, RoutedEventArgs e)
