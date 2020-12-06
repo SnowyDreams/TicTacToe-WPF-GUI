@@ -26,14 +26,14 @@
         <TextBlock Name="scoreO" Margin="5,0,50,0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" FontSize="100" FontWeight="ExtraBold" VerticalAlignment="Center" >0</TextBlock>
         <TextBlock  Grid.Row="1" Grid.Column="0" HorizontalAlignment="center" FontSize="70" FontWeight="ExtraBold" VerticalAlignment="Center" >:</TextBlock>
         <Button Name="GameReset" Grid.Column="0" Grid.Row="2" Margin="10" Content="NEW GAME" PreviewMouseDown="GameResetClick"/>
-        <Button Name="GameCell1" Grid.Column="1" Grid.Row="0" Margin="10" PreviewMouseDown="gameCell1_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell2" Grid.Column="2" Grid.Row="0" Margin="10" PreviewMouseDown="gameCell2_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell3" Grid.Column="3" Grid.Row="0" Margin="10" PreviewMouseDown="gameCell3_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell4" Grid.Column="1" Grid.Row="1" Margin="10" PreviewMouseDown="gameCell4_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell5" Grid.Column="2" Grid.Row="1" Margin="10" PreviewMouseDown="gameCell5_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell6" Grid.Column="3" Grid.Row="1" Margin="10" PreviewMouseDown="gameCell6_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell7" Grid.Column="1" Grid.Row="2" Margin="10" PreviewMouseDown="gameCell7_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell8" Grid.Column="2" Grid.Row="2" Margin="10" PreviewMouseDown="gameCell8_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
-        <Button Name="GameCell9" Grid.Column="3" Grid.Row="2" Margin="10" PreviewMouseDown="gameCell9_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell1" Grid.Column="1" Grid.Row="0" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell2" Grid.Column="2" Grid.Row="0" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell3" Grid.Column="3" Grid.Row="0" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell4" Grid.Column="1" Grid.Row="1" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell5" Grid.Column="2" Grid.Row="1" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell6" Grid.Column="3" Grid.Row="1" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell7" Grid.Column="1" Grid.Row="2" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell8" Grid.Column="2" Grid.Row="2" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
+        <Button Name="GameCell9" Grid.Column="3" Grid.Row="2" Margin="10" PreviewMouseDown="CellClick" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Width="110" FontSize="60" BorderThickness="5"/>
     </Grid>
 </Window>
